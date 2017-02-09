@@ -9,6 +9,9 @@
 import Cocoa
 
 class SourceVC: NSViewController {
+    
+    
+    @IBOutlet var tableView: NSTableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

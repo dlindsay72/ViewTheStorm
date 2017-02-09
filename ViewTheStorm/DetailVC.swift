@@ -9,6 +9,9 @@
 import Cocoa
 
 class DetailVC: NSViewController {
+    
+    
+    @IBOutlet var imageView: NSImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
