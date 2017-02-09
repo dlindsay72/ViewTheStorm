@@ -42,4 +42,13 @@ class SourceVC: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
         return vw
     }
     
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        guard tableView.selectedRow != -1 else { return }
+        guard let splitVC = parent as? NSSplitViewController else { return }
+        
+        if let detail = splitVC.childViewControllers[1] as? DetailVC {
+            detail.imageSelected(name: pictures[tableView.selectedRow])
+        }
+    }
+    
 }
