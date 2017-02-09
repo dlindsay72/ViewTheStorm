@@ -733,26 +733,22 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="DwJ-0e-Jgr">
+                                                        <tableCellView id="BK8-Lj-ik7">
                                                             <rect key="frame" x="1" y="1" width="245" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAG-NM-qni">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuN-Ib-mdK">
                                                                     <rect key="frame" x="0.0" y="0.0" width="245" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="rPm-tg-kZl">
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="o4J-ba-d4b">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="NAG-NM-qni" firstAttribute="centerY" secondItem="DwJ-0e-Jgr" secondAttribute="centerY" id="AaU-rD-Fy3"/>
-                                                                <constraint firstItem="NAG-NM-qni" firstAttribute="leading" secondItem="DwJ-0e-Jgr" secondAttribute="leading" constant="2" id="Z6z-HV-ec8"/>
-                                                                <constraint firstItem="NAG-NM-qni" firstAttribute="centerX" secondItem="DwJ-0e-Jgr" secondAttribute="centerX" id="tOB-Es-tc1"/>
-                                                            </constraints>
                                                             <connections>
-                                                                <outlet property="textField" destination="NAG-NM-qni" id="z0B-Xi-b1c"/>
+                                                                <outlet property="textField" destination="YuN-Ib-mdK" id="tCs-St-teR"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
