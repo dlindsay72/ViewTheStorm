@@ -202,15 +202,42 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="WindowVC" customModule="ViewTheStorm" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="View the Storm" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="480" height="270"/>
+                        <toolbar key="toolbar" implicitIdentifier="98804640-9905-440A-BDC1-12AD3A74A176" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconOnly" sizeMode="regular" id="KyQ-re-FaG">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="PmL-mE-Bsk"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="ttZ-CE-6T5"/>
+                                <toolbarItem implicitItemIdentifier="ABA3C4B7-120B-40CD-872F-D17AAE3B4F4B" label="" paletteLabel="" image="NSShareTemplate" id="BSg-Oc-xGJ">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="47" height="25"/>
+                                    <size key="maxSize" width="47" height="25"/>
+                                    <button key="view" verticalHuggingPriority="750" id="QdM-pc-mxZ">
+                                        <rect key="frame" x="0.0" y="14" width="47" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSShareTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uyN-Ik-BxO">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="shareClicked:" target="Oky-zY-oP4" id="4FL-Ks-4Fc"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="ttZ-CE-6T5"/>
+                                <toolbarItem reference="BSg-Oc-xGJ"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                     </window>
                     <connections>
+                        <outlet property="shareButton" destination="QdM-pc-mxZ" id="6Hb-Wi-XLr"/>
                         <segue destination="1JU-mT-A0F" kind="relationship" relationship="window.shadowedContentViewController" id="gKm-Yy-jlg"/>
                     </connections>
                 </windowController>
@@ -218,10 +245,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Split View Controller-->
+        <!--View Controller-->
         <scene sceneID="pcZ-Vf-0S5">
             <objects>
-                <splitViewController id="1JU-mT-A0F" sceneMemberID="viewController">
+                <splitViewController id="1JU-mT-A0F" customClass="ViewController" customModule="ViewTheStorm" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem holdingPriority="260" id="RQH-NN-mam"/>
                         <splitViewItem id="qz6-zP-LvV"/>
@@ -356,4 +383,7 @@
             <point key="canvasLocation" x="433" y="1012"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSShareTemplate" width="11" height="16"/>
+    </resources>
 </document>
